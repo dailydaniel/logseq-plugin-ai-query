@@ -25,7 +25,7 @@ jobs:
         id: build
         run: |
           npm install
-          npm build
+          npm run build
           mkdir ${{ env.PLUGIN_NAME }}
           cp README.md LICENSE index.ts index.html package.json logo.png examples/* ${{ env.PLUGIN_NAME }}
           zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
