@@ -1,0 +1,28 @@
+{
+  "name": "logseq-query-generator",
+  "version": "0.0.2",
+  "description": "AI advanced query generator for Logseq",
+  "main": "dist/index.html",
+  "author": "Daniel",
+  "license": "MIT",
+  "targets": {
+    "main": false
+  },
+  "default": "dist/index.html",
+  "scripts": {
+    "dev": "parcel ./index.html --public-url ./",
+    "build": "parcel build --public-url . --no-source-maps index.html"
+  },
+  "devDependencies": {
+    "@logseq/libs": "^0.0.6",
+    "buffer": "^6.0.3",
+    "parcel": "^2.0.0"
+  },
+  "logseq": {
+    "id": "daniel-query-generator-trtrtr",
+    "icon": "./logo.png"
+  },
+  "dependencies": {
+    "axios": "^1.7.5"
+  }
+}

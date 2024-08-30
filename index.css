@@ -1,0 +1,35 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: white;
+}
+
+#app {
+    padding-top: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Позволяет лучше размещать элементы вертикально */
+}
+
+/* Стили для текстового вывода */
+.output-text {
+    margin-top: 20px; /* Добавляет отступ сверху для отделения от других элементов */
+    padding: 10px;
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+    ); /* Полупрозрачный фон для выделения текста */
+    border-radius: 8px; /* Скругление углов */
+    max-width: 80%; /* Максимальная ширина */
+    text-align: left; /* Выравнивание текста влево */
+    color: white; /* Цвет текста */
+}
