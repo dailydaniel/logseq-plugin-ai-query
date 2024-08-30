@@ -10,7 +10,7 @@ async function generateText(prompt: string, apiKey: string) {
   const response = await axios.post(
     "https://api.openai.com/v1/chat/completions",
     {
-      model: "gpt-4o-mini", // Используйте нужную вам модель
+      model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: prompt },
@@ -23,7 +23,7 @@ async function generateText(prompt: string, apiKey: string) {
       },
     },
   );
-  return response.data.choices[0].message.content; // Вернуть сгенерированный текст
+  return response.data.choices[0].message.content;
 }
 
 async function processString(input: string) {
@@ -53,23 +53,18 @@ async function main() {
     },
   ]);
 
-  // Регистрация команды "gen text"
   logseq.Editor.registerSlashCommand(
     "Generate Advanced Query with AI",
     async () => {
       const { content, uuid } = await logseq.Editor.getCurrentBlock();
-      // await logseq.Editor.insertAtEditingCursor("Hello, World!");
       const generatedText = await generateText(
         content,
         logseq.settings?.apiKey,
       );
       const processedText = await processString(generatedText);
-      // await logseq.Editor.updateBlock(uuid, processedText);
-      // await logseq.Editor.updateBlock(uuid, processedText);
       await logseq.Editor.updateBlock(uuid, processedText);
     },
   );
 }
 
-// bootstrap
 logseq.ready(main).catch(console.error);

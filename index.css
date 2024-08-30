@@ -15,21 +15,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* Позволяет лучше размещать элементы вертикально */
+    flex-direction: column;
 }
 
-/* Стили для текстового вывода */
 .output-text {
-    margin-top: 20px; /* Добавляет отступ сверху для отделения от других элементов */
+    margin-top: 20px;
     padding: 10px;
-    background-color: rgba(
-        255,
-        255,
-        255,
-        0.1
-    ); /* Полупрозрачный фон для выделения текста */
-    border-radius: 8px; /* Скругление углов */
-    max-width: 80%; /* Максимальная ширина */
-    text-align: left; /* Выравнивание текста влево */
-    color: white; /* Цвет текста */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: left;
+    color: white;
 }
