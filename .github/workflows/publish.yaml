@@ -27,7 +27,7 @@ jobs:
           npm install
           npm run build
           mkdir ${{ env.PLUGIN_NAME }}
-          cp README.md LICENSE index.ts index.html package.json logo.png start.gif example.gif ${{ env.PLUGIN_NAME }}
+          cp README.md LICENSE index.ts dist/* package.json logo.png start.gif example.gif ${{ env.PLUGIN_NAME }}
           zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
           ls
           echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
