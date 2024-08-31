@@ -1,14 +1,14 @@
 {
   "name": "ai-query-generator",
-  "version": "v0.1.3",
+  "version": "v0.1.4",
   "description": "AI advanced query generator for Logseq",
-  "main": "dist/index.html",
+  "main": "index.html",
   "author": "Daniel",
   "license": "MIT",
   "targets": {
     "main": false
   },
-  "default": "dist/index.html",
+  "default": "index.html",
   "scripts": {
     "dev": "parcel ./index.html --public-url ./",
     "build": "parcel build --public-url . --no-source-maps index.html"
