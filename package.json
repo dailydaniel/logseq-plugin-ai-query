@@ -1,8 +1,8 @@
 {
   "name": "ai-query-generator",
-  "version": "v0.1.7",
+  "version": "v0.1.8",
   "description": "AI advanced query generator for Logseq",
-  "main": "dist/index.html",
+  "main": "index.html",
   "author": "Daniel",
   "license": "MIT",
   "targets": {
